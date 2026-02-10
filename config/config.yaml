@@ -1,0 +1,46 @@
+# Model Configuration
+model:
+  name: "gpt-3.5-turbo"
+  temperature: 0
+
+
+# Embedding Model
+embeddings:
+  model_name: "sentence-transformers/all-mpnet-base-v2"
+
+# Vector Database
+vectorstore:
+  type: "faiss"
+  persist_directory: "vectorstore/faiss_index_store"
+  search_type: "mmr"
+  search_kwargs:
+    k: 3
+    lambda_mult: 0.5
+
+# Compliance Categories
+categories:
+  - "Secrecy"
+  - "Market Manipulation/Misconduct"
+  - "Market Bribery"
+  - "Change in Communication"
+  - "Complaints"
+  - "Employee Ethics"
+
+# Risk Weights
+weights:
+  "Secrecy": 10
+  "Market Manipulation/Misconduct": 8
+  "Market Bribery": 7
+  "Change in Communication": 6
+  "Complaints": 5
+  "Employee Ethics": 4
+
+# Email Domains
+trusted_domains:
+  - "enron.com"
+
+# Data Generation
+data_generation:
+  sample_size: 20
+  test_size: 10
+  non_compliant_ratio: 0.8
