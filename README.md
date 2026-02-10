@@ -25,17 +25,7 @@ The system combines:
 
 
 ## Architecture
-Streamlit UI
-   ↓
-ComplianceBackend
-   ↓
-EmailClassifier (RAG Pipeline)
-   ↓
-FAISS Vector Store (Historical Emails)
-   ↓
-LLM (Reasoning + Classification)
-   ↓
-Risk Scoring Engine
+Streamlit UI -> ComplianceBackend -> EmailClassifier (RAG Pipeline) -> FAISS Vector Store (Historical Emails) -> LLM (Reasoning + Classification) -> Risk Scoring Engine
 
 ## RAG Flow
 - Retrieve semantically similar historical emails from FAISS
@@ -50,8 +40,8 @@ Prerequisites
 - OpenAI API key
 
 1️⃣ Clone the Repository
-git clone https://github.com/anjalibankar/rag-email-compliance-system.git
-cd ag-email-compliance-system
+- git clone https://github.com/anjalibankar/rag-email-compliance-system.git
+- cd ag-email-compliance-system
 
 2️⃣ Install Dependencies
 uv sync
