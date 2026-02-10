@@ -76,6 +76,15 @@ streamlit run app/Home.py
     - calculate risk scores
     - generate a downloadable compliance report
 
+## Compliance Categories (Example)
+- Secrecy
+- Market Manipulation
+- Market Bribery
+- Change in Communication
+- Complaints
+- Employee Ethics
+Each category contributes differently to the overall risk score.
+
 
 ## Disclaimer
 This project uses synthetic/sample data only.
